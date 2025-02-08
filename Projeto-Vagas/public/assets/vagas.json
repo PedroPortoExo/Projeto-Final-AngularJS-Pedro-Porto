@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "titulo": "Desenvolvedor Frontend",
+      "empresa": "Tech Corp",
+      "tecnologias": ["Angular", "TypeScript", "CSS"]
+    },
+    {
+      "id": 2,
+      "titulo": "Desenvolvedor Backend",
+      "empresa": "Dev Solutions",
+      "tecnologias": ["Node.js", "Express", "MongoDB"]
+    },
+    {
+      "id": 3,
+      "titulo": "Full Stack Developer",
+      "empresa": "Startup X",
+      "tecnologias": ["Angular", "Node.js", "PostgreSQL"]
+    },
+    {
+      "id": 4,
+      "titulo": "Desenvolvedor Mobile",
+      "empresa": "Tech Corp",
+      "tecnologias": ["React Native", "JavaScript", "Kotlin"]
+    },
+    {
+      "id": 5,
+      "titulo": "Desenvolvedor QA",
+      "empresa": "Dev Solutions",
+      "tecnologias": ["Selenium", "Cucumber", "Java"]
+    },
+    {
+    "id": 6,
+      "titulo": "Desenvolvedor UX/UI",
+      "empresa": "Startup X",
+      "tecnologias": ["Figma", "Sketch", "Adobe XD"]
+    },
+    {
+      "id": 7,
+      "titulo": "Desenvolvedor Blockchain",
+      "empresa": "Tech Corp",
+      "tecnologias": ["Solidity", "Ethereum", "Python"]
+    },
+    {
+      "id": 8,
+      "titulo": "Desenvolvedor DevOps",
+      "empresa": "Startup X",
+      "tecnologias": ["Docker", "Kubernetes", "Git"]
+    },
+    {
+      "id": 9,
+      "titulo": "Desenvolvedor Blockchain",
+      "empresa": "Startup X",
+      "tecnologias": ["Solidity", "Ethereum", "Python"]
+    }
+  ]
+  
