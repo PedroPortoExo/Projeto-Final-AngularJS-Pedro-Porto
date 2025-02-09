@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import vagas from '../../../public/assets/vagas.json';
 import categorias from '../../../public/assets/categorias.json';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
     selector:"home",

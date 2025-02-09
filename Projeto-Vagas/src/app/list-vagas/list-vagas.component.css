@@ -1,0 +1,92 @@
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 20px;
+  }
+  .jobs-section {
+    margin-bottom: 64px;
+  }
+  
+  .jobs-section h2,
+  .categories-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+  
+  .jobs-grid,
+  .categories-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: stretch;
+  }
+  
+
+.job-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+  }
+  
+  .job-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+.job-card button {
+    background: linear-gradient(135deg, #20b0be, #26b5ae);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 4px;
+  }
+  
+  .job-card button:hover {
+    background: linear-gradient(135deg, #20ebff, #18e8de);
+    transform: scale(1.05);
+  }
+  
+  .filtro-container button {
+    background: transparent;
+    border: 2px solid #20b0be;
+    color: #20b0be;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 4px;
+  }
+  
+  .filtro-container button:hover {
+    background: #20b0be;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  .limpar-filtro {
+    background: #ff4b4b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 4px;
+  }
+  
+  .limpar-filtro:hover {
+    background: #ff3131;
+    transform: scale(1.05);
+  }
+  

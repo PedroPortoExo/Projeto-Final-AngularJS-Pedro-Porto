@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FiltroVagasComponent } from '../filtro-vagas/filtro-vagas.component';
+import { HeaderComponent } from '../header/header.component';
 import vagas from '../../../public/assets/vagas.json';
 
 @Component({

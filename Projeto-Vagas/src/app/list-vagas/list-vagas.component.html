@@ -1,26 +1,47 @@
-<div>
-    <h2>Lista de Vagas</h2>
+<main class="main-content">
+    <section class="jobs-section">
+      <div class="jobs-grid">
+        <h2>Lista de Vagas</h2>
   
-    @if (tecnologiaSelecionada) {
-      <button (click)="limparFiltro()">
-        Limpar Filtro ({{ tecnologiaSelecionada }})
-      </button>
-    }
-    <app-filtro-vagas [tecnologias]="tecnologiasDisponiveis"(tecnologiaSelecionada)="filtro($event)"></app-filtro-vagas>
-    <ul>
-      @for (vaga of vagasFiltradas; track vaga.id) {
-        <li>
-          <h3>{{ vaga.titulo }}</h3>
-          <p>Empresa: {{ vaga.empresa }}</p>
-          
-          <p><strong>Tecnologias:</strong></p>
-          <div>
-            @for (tecnologia of vaga.tecnologias; track tecnologia) {
-              <button (click)="filtro(tecnologia)">{{ tecnologia }}</button>
-            }
+        @if (tecnologiaSelecionada) {
+          <button class="limpar-filtro" (click)="limparFiltro()">
+            Limpar Filtro ({{ tecnologiaSelecionada }})
+          </button>
+        }
+  
+        <!-- Filtro de vagas -->
+        <app-filtro-vagas [tecnologias]="tecnologiasDisponiveis" (tecnologiaSelecionada)="filtro($event)"></app-filtro-vagas>
+  
+        <!-- Listagem de vagas -->
+        @for (vaga of vagasFiltradas; track vaga.id) {
+          <div class="job-card">
+            <div class="job-card-header">
+              <div class="job-info">
+                <h3>{{ vaga.titulo }}</h3>
+                <div class="company-info">
+                  <i class="building-icon"></i>
+                  <span>{{ vaga.empresa }}</span>
+                </div>
+                <div class="location-info">
+                  <i class="location-pin-icon"></i>
+                  <span>{{ vaga.localiza }}</span>
+                </div>
+                <div class="salary-info">
+                  <i class="dollar-icon"></i>
+                  <span>{{ vaga.salario }}</span>
+                </div>
+              </div>
+              <span class="job-type">{{ vaga.type }}</span>
+            </div>
+  
+            <p><strong>Tecnologias:</strong></p>
+            <div class="tecnologias-container">
+              @for (tecnologia of vaga.tecnologias; track $index) {
+                <button class="tecnologia-btn" (click)="filtro(tecnologia)">{{ tecnologia }}</button>
+              }
+            </div>
           </div>
-        </li>
-      }
-    </ul>
-  </div>
-  
+        }
+      </div>
+    </section>
+  </main>  
