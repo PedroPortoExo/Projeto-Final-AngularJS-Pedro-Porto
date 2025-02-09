@@ -1,0 +1,303 @@
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+    color: #1a1a1a;
+  }
+  
+  .page-container {
+    min-height: 70vh;
+    background-color: #f9fafb;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+      url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(17, 24, 39, 0.6));
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Search Bar */
+  .search-container {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-wrapper {
+    display: flex;
+    gap: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .search-wrapper {
+      flex-direction: column;
+    }
+  }
+  
+  .search-input-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-right: 1px solid #e5e7eb;
+  }
+  
+  @media (max-width: 768px) {
+    .search-input-group {
+      border-right: none;
+      border-bottom: 1px solid #e5e7eb;
+    }
+  }
+  
+  .search-input-group:last-of-type {
+    border-right: none;
+  }
+  
+  .search-input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .search-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .search-button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Main Content */
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 20px;
+  }
+  
+  /* Jobs Section */
+  .jobs-section {
+    margin-bottom: 64px;
+  }
+  
+  .jobs-section h2,
+  .categories-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+  
+  .jobs-grid,
+  .categories-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: stretch;
+  }
+  
+  /* Job Card */
+  .job-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+  }
+  
+  .job-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    align-items: flex-end;
+  }
+  
+  .job-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .company-info,
+  .location-info,
+  .salary-info {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+  
+  .job-type {
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .details-button {
+    width: 100%;
+    background-color: #f9fafb;
+    color: #374151;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .details-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  /* Category Card */
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 20px;
+  }
+  .category-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+  }
+  
+  .category-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .category-icon-wrapper {
+    background-color: #dbeafe;
+    padding: 12px;
+    border-radius: 8px;
+    margin-right: 16px;
+  }
+  
+  .category-details h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  
+  .category-details p {
+    color: #6b7280;
+  }
+  
+  /* Icons */
+  .search-icon::before,
+  .location-icon::before,
+  .location-pin-icon::before,
+  .building-icon::before,
+  .dollar-icon::before,
+  .briefcase-icon::before,
+  .chevron-right-icon::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+  }
+  
+  .search-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239CA3AF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  }
+  
+  .location-icon::before,
+  .location-pin-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239CA3AF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E");
+  }
+  
+  .building-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239CA3AF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z'%3E%3C/path%3E%3Cpath d='M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2'%3E%3C/path%3E%3Cpath d='M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2'%3E%3C/path%3E%3Cpath d='M10 6h4'%3E%3C/path%3E%3Cpath d='M10 10h4'%3E%3C/path%3E%3Cpath d='M10 14h4'%3E%3C/path%3E%3Cpath d='M10 18h4'%3E%3C/path%3E%3C/svg%3E");
+  }
+  
+  .dollar-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239CA3AF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='1' x2='12' y2='23'%3E%3C/line%3E%3Cpath d='M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'%3E%3C/path%3E%3C/svg%3E");
+  }
+  
+  .briefcase-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232563EB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='14' x='2' y='7' rx='2' ry='2'%3E%3C/rect%3E%3Cpath d='M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'%3E%3C/path%3E%3C/svg%3E");
+  }
+  
+  .chevron-right-icon::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239CA3AF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 18 6-6-6-6'%3E%3C/path%3E%3C/svg%3E");
+    transition: filter 0.2s;
+  }
+  
+  .category-card:hover .chevron-right-icon::before {
+    filter: invert(31%) sepia(93%) saturate(1954%) hue-rotate(214deg) brightness(97%) contrast(101%);
+  }

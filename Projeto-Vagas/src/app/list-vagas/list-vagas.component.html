@@ -1,0 +1,26 @@
+<div>
+    <h2>Lista de Vagas</h2>
+  
+    @if (tecnologiaSelecionada) {
+      <button (click)="limparFiltro()">
+        Limpar Filtro ({{ tecnologiaSelecionada }})
+      </button>
+    }
+    <app-filtro-vagas [tecnologias]="tecnologiasDisponiveis"(tecnologiaSelecionada)="filtro($event)"></app-filtro-vagas>
+    <ul>
+      @for (vaga of vagasFiltradas; track vaga.id) {
+        <li>
+          <h3>{{ vaga.titulo }}</h3>
+          <p>Empresa: {{ vaga.empresa }}</p>
+          
+          <p><strong>Tecnologias:</strong></p>
+          <div>
+            @for (tecnologia of vaga.tecnologias; track tecnologia) {
+              <button (click)="filtro(tecnologia)">{{ tecnologia }}</button>
+            }
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+  

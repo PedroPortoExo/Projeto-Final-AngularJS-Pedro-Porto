@@ -3,55 +3,83 @@
       "id": 1,
       "titulo": "Desenvolvedor Frontend",
       "empresa": "Tech Corp",
-      "tecnologias": ["Angular", "TypeScript", "CSS"]
+      "tecnologias": ["Angular", "TypeScript", "CSS"],
+      "localiza": "São Paulo, SP",
+      "salario": "R$ 15.000 - R$ 18.000",
+      "type": "Remoto"
     },
     {
       "id": 2,
       "titulo": "Desenvolvedor Backend",
       "empresa": "Dev Solutions",
-      "tecnologias": ["Node.js", "Express", "MongoDB"]
+      "tecnologias": ["Node.js", "Express", "MongoDB"],
+      "localiza": "Rio de Janeiro, RJ",
+      "salario": "R$ 20.000 - R$ 25.000",
+      "type": "Remoto"
+
     },
     {
       "id": 3,
       "titulo": "Full Stack Developer",
       "empresa": "Startup X",
-      "tecnologias": ["Angular", "Node.js", "PostgreSQL"]
+      "tecnologias": ["Angular", "Node.js", "PostgreSQL"],
+      "localiza": "São Paulo, SP",
+      "salario": "R$ 25.000 - R$ 30.000",
+      "type": "Remoto"
     },
     {
       "id": 4,
       "titulo": "Desenvolvedor Mobile",
       "empresa": "Tech Corp",
-      "tecnologias": ["React Native", "JavaScript", "Kotlin"]
+      "tecnologias": ["React Native", "JavaScript", "Kotlin"],
+      "localiza": "São Paulo, SP",
+      "salario": "R$ 10.000 - R$ 15.000",
+      "type": "Presencial"
     },
     {
       "id": 5,
       "titulo": "Desenvolvedor QA",
       "empresa": "Dev Solutions",
-      "tecnologias": ["Selenium", "Cucumber", "Java"]
+      "tecnologias": ["Selenium", "Cucumber", "Java"],
+      "localiza": "Rio de Janeiro, RJ",
+      "salario": "R$ 12.000 - R$ 18.000",
+      "type": "Presencial"
     },
     {
     "id": 6,
       "titulo": "Desenvolvedor UX/UI",
       "empresa": "Startup X",
-      "tecnologias": ["Figma", "Sketch", "Adobe XD"]
+      "tecnologias": ["Figma", "Sketch", "Adobe XD"],
+      "localiza": "São Paulo, SP",
+      "salario": "R$ 15.000 - R$ 20.000",
+      "type": "Presencial"
     },
     {
       "id": 7,
       "titulo": "Desenvolvedor Blockchain",
       "empresa": "Tech Corp",
-      "tecnologias": ["Solidity", "Ethereum", "Python"]
+      "tecnologias": ["Solidity", "Ethereum", "Python"],
+      "localiza": "São Paulo, SP",
+      "salario": "R$ 20.000 - R$ 30.000",
+      "type": "Remoto"
     },
     {
       "id": 8,
       "titulo": "Desenvolvedor DevOps",
       "empresa": "Startup X",
-      "tecnologias": ["Docker", "Kubernetes", "Git"]
+      "tecnologias": ["Docker", "Kubernetes", "Git"],
+      "localiza": "São Paulo, SP",
+      "salario": "R$ 25.000 - R$ 35.000",
+      "type": "Remoto"
     },
     {
       "id": 9,
       "titulo": "Desenvolvedor Blockchain",
       "empresa": "Startup X",
-      "tecnologias": ["Solidity", "Ethereum", "Python"]
+      "tecnologias": ["Solidity", "Ethereum", "Python"],
+      "localiza": "São Paulo, SP",
+      "salario": "R$ 20.000 - R$ 30.000",
+      "type": "Remoto"
     }
   ]
   

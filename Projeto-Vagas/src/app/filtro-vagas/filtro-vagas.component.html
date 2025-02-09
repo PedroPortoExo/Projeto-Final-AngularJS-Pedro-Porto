@@ -1,0 +1,9 @@
+<div>
+    <h3>Filtrar por Tecnologia</h3>
+    @for (tecnologia of tecnologias; track tecnologia) {
+      <button (click)="selecionarTecnologia(tecnologia)">
+        {{ tecnologia }}
+      </button>
+    }
+  </div>
+  

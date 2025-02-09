@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import vagas from '../../../public/assets/vagas.json';
+import categorias from '../../../public/assets/categorias.json';
 
 @Component({
     selector:"home",
     standalone: true,
-    imports: [],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css'
+    imports: [RouterModule],
+    templateUrl: './home.component.html',
+    styleUrl: '../app.component.css'
 })
-export class HomeComponent {}
+export class HomeComponent {
+  listVagas = vagas;
+  listCategorias = categorias;
+}
