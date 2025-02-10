@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FiltroVagasComponent } from '../filtro-vagas/filtro-vagas.component';
-import { HeaderComponent } from '../header/header.component';
 import vagas from '../../../public/assets/vagas.json';
 
 @Component({
@@ -15,7 +14,8 @@ export class ListVagasComponent {
   listaVagas = vagas;
   vagasFiltradas: any[] = [];
   tecnologiasDisponiveis: string[] = [];
-  tecnologiaSelecionada: string | null = null;
+  tecnologiasSelecionadas: string[] = [];
+
 
   constructor(private http: HttpClient) {}
 
@@ -23,27 +23,44 @@ export class ListVagasComponent {
     this.http.get<any[]>('assets/vagas.json').subscribe(data => {
       this.listVagas = data;
       this.vagasFiltradas = data;
-      this.extrairTecnologias();
+      this.extrairTecnologias();//preenche as tecnologiasDisponiveis
     });
   }
 
   filtro(tecnologia: string) {
-    this.tecnologiaSelecionada = tecnologia;
+    if (!this.tecnologiasSelecionadas.includes(tecnologia)) {
+      this.tecnologiasSelecionadas = [...this.tecnologiasSelecionadas, tecnologia]; // Atualiza corretamente agora tentei com push funcionava mas não da forma que queria
+      //Cria um novo array copiando os elementos antigos e adicionando o novo. O Angular detecta a mudança, pois a referência do array mudou, acionando a atualização da UI.
+  }
+    this.aplicarFiltro();
+  }
+
+  removerFiltro(tecnologia: string) {
+    this.tecnologiasSelecionadas = this.tecnologiasSelecionadas.filter(tec => tec !== tecnologia);
+    this.aplicarFiltro();
+  }
+
+
+  limparFiltro() {
+    this.tecnologiasSelecionadas.length = 0;
+    this.vagasFiltradas = this.listVagas;
+  }
+
+  private aplicarFiltro() {
+    if (this.tecnologiasSelecionadas.length === 0) {
+      this.vagasFiltradas = this.listVagas;
+      return;
+    }
     this.vagasFiltradas = this.listVagas.filter(vaga =>
-      vaga.tecnologias.includes(tecnologia)
+      this.tecnologiasSelecionadas.some(tec => vaga.tecnologias.includes(tec))// some percorre o array retornando true ou false
     );
   }
 
-  limparFiltro() {
-    this.tecnologiaSelecionada = null;
-    this.vagasFiltradas = [...this.listVagas];
-  }
-
   private extrairTecnologias() {
-    const tecnologiasSet = new Set<string>();
+    const tecnologiasSet = new Set<string>();// não permite duplicatas
     this.listVagas.forEach(vaga => {
-      vaga.tecnologias.forEach((tec: string) => tecnologiasSet.add(tec));
+      vaga.tecnologias.forEach((tec: string) => tecnologiasSet.add(tec));//convertendo para um array
     });
-    this.tecnologiasDisponiveis = Array.from(tecnologiasSet);
+    this.tecnologiasDisponiveis = Array.from(tecnologiasSet);// armazenando o array em tecnologiasDisponiveis
   }
 }

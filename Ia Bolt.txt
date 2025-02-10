@@ -1,0 +1,4 @@
+1 = faça um html e css de uma pagina home de vagas de emprego
+2 = quero um em angular js cli versão 19 , so precisa modificar o app.component.html e o app;component.css para criar a pagina home
+3 = você consegue mudar o estilo do css ? ao inves de usar o tailwind poderia usar o css puro ?
+4 = alguns erros que deram , uns resolvi outros mandei pra ia (foram vários então nem conseguiria listar os que resolvi solo e os que resolvi com a ia) 
