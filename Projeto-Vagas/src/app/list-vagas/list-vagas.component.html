@@ -1,0 +1,58 @@
+<main class="main-content">
+        <h2>Lista de Vagas</h2>
+  
+        @if (tecnologiasSelecionadas) {
+          <button class="limpar-filtro" (click)="limparFiltro()">
+            Limpar Filtro ({{ tecnologiasSelecionadas }})
+          </button>
+        }
+        @if (tecnologiasSelecionadas.length > 0) {
+            <div class="filtro-selecionado">
+              <span>Filtros ativos:</span>
+              @for (tec of tecnologiasSelecionadas; track tec) {
+                <span class="filtro-tag">
+                  {{ tec }} 
+                  <button (click)="removerFiltro(tec)">x</button>
+                </span>
+              }
+            </div>
+          }
+        <app-filtro-vagas [tecnologias]="tecnologiasDisponiveis" (tecnologiaSelecionada)="filtro($event)"></app-filtro-vagas>
+  
+        <section class="jobs-section">
+            <div class="jobs-grid">
+        @for (vaga of vagasFiltradas; track vaga.id) {
+          <div class="job-card">
+            <div class="job-card-header">
+              <div class="job-info">
+                <h3>{{ vaga.titulo }}</h3>
+                <div class="company-info">
+                  <i class="building-icon"></i>
+                  <span>{{ vaga.empresa }}</span>
+                </div>
+                <div class="location-info">
+                  <i class="location-pin-icon"></i>
+                  <span>{{ vaga.localiza }}</span>
+                </div>
+                <div class="salary-info">
+                  <i class="dollar-icon"></i>
+                  <span>{{ vaga.salario }}</span>
+                </div>
+              </div>
+              <div class="type-info">
+                <i class="presencial-remoto-icon"></i>
+                <span class="job-type">{{ vaga.type }}</span>
+            </div>
+            </div>
+  
+            <p><strong>Tecnologias:</strong></p>
+            <div class="tecnologias-container">
+              @for (tecnologia of vaga.tecnologias; track $index) {
+                <button class="tecnologia-btn" (click)="filtro(tecnologia)">{{ tecnologia }}</button>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+  </main>  
